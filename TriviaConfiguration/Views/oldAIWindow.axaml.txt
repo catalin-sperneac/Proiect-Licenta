@@ -1,0 +1,75 @@
+<!--
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TriviaConfiguration.Views.AIWindow"
+        Width="500"
+        Height="600"
+        Title="AI Trivia Generator">
+
+    <StackPanel Margin="20" Spacing="15">
+
+        <TextBlock Text="AI Trivia Generator"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+
+        <!-- Multiple Choice Count -->
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <TextBlock Text="Multiple Choice Questions:" VerticalAlignment="Center"/>
+            <TextBox x:Name="MCQuestionsTextBox"
+                     Width="80"
+                     TextInput="NumberTextBox_OnTextInput"/>
+        </StackPanel>
+
+        <!-- Input Questions Count -->
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <TextBlock Text="Input Questions:" VerticalAlignment="Center"/>
+            <TextBox x:Name="InputQuestionsTextBox"
+                     Width="80"
+                     TextInput="NumberTextBox_OnTextInput"/>
+        </StackPanel>
+
+        <!-- Language Selector -->
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <TextBlock Text="Language:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="LanguageComboBox" Width="150">
+                <ComboBoxItem Content="English"/>
+                <ComboBoxItem Content="Romanian"/>
+                <ComboBoxItem Content="French"/>
+                <ComboBoxItem Content="German"/>
+                <ComboBoxItem Content="Spanish"/>
+                <ComboBoxItem Content="Italian"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Additional Instructions -->
+        <TextBlock Text="Additional Instructions:"/>
+        <TextBox x:Name="AdditionalPromptTextBox"
+                 AcceptsReturn="True"
+                 Height="150"
+                 TextWrapping="Wrap"/>
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    Margin="0 20 0 0">
+
+            <Button x:Name="BackButton"
+                    Content="Back"
+                    Width="120"
+                    Background="#FF4C4C"
+                    Foreground="Black"
+                    Click="BackButton_Click"/>
+
+            <Button x:Name="ApplyButton"
+                    Content="Generate"
+                    Width="120"
+                    Background="#4CA3FF"
+                    Foreground="Black"
+                    Click="ApplyButton_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
+-->

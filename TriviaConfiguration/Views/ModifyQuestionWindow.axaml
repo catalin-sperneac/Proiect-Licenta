@@ -1,0 +1,52 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TriviaConfiguration.Views.ModifyQuestionWindow"
+        Width="500"
+        Height="650"
+        Title="Modify Question">
+
+    <StackPanel Margin="20" Spacing="15">
+
+        <TextBlock Text="Modify Question"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Question:"/>
+        <TextBox x:Name="QuestionTextBox"
+                 AcceptsReturn="True"
+                 Height="80"
+                 TextWrapping="Wrap"/>
+
+        <!-- Multiple choice section -->
+        <StackPanel x:Name="MultipleChoicePanel" Spacing="10">
+
+            <TextBlock Text="Answer 1 (correct answer):"/>
+            <TextBox x:Name="Answer1TextBox"/>
+
+            <TextBlock Text="Answer 2:"/>
+            <TextBox x:Name="Answer2TextBox"/>
+
+            <TextBlock Text="Answer 3:"/>
+            <TextBox x:Name="Answer3TextBox"/>
+
+            <TextBlock Text="Answer 4:"/>
+            <TextBox x:Name="Answer4TextBox"/>
+        </StackPanel>
+
+        <!-- Input question section -->
+        <StackPanel x:Name="InputPanel" Spacing="10">
+            <TextBlock Text="Correct Answer:"/>
+            <TextBox x:Name="CorrectAnswerTextBox"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    Margin="0,20,0,0">
+            <Button Content="Back" Width="120" Background="#FF4C4C" Foreground="Black" Click="BackButton_Click"/>
+            <Button Content="Apply" Width="120" Background="#4CA3FF" Foreground="Black" Click="ApplyButton_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

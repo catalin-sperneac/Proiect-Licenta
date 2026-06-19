@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TriviaConfiguration.Views.AddQuestionWindow"
+        Width="700" Height="600"
+        Title="Add Question">
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="12">
+
+            <TextBlock Text="Add Question"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+            <TextBlock Text="Question Type:" FontSize="16"/>
+            <ComboBox x:Name="QuestionTypeComboBox"
+                      Width="220"
+                      SelectionChanged="QuestionTypeComboBox_SelectionChanged">
+                <ComboBoxItem Content="input"/>
+                <ComboBoxItem Content="multiple choice"/>
+            </ComboBox>
+
+            <TextBlock Text="Question Text:" FontSize="16"/>
+            <TextBox x:Name="QuestionTextBox"
+                     Watermark="Enter question text"/>
+
+            <TextBlock Text="Correct Answer:" FontSize="16"/>
+            <TextBox x:Name="CorrectAnswerTextBox"
+                     Watermark="Enter correct answer"
+                     TextChanged="CorrectAnswerTextBox_TextChanged"
+                     TextInput="NumberTextBox_OnTextInput"/>
+
+            <StackPanel x:Name="MultipleChoicePanel"
+                        IsVisible="False"
+                        Spacing="10">
+
+                <TextBlock Text="Answer 2:" FontSize="16"/>
+                <TextBox x:Name="Answer2TextBox"
+                         Watermark="Answer 2"
+                         TextInput="NumberTextBox_OnTextInput"/>
+
+                <TextBlock Text="Answer 3:" FontSize="16"/>
+                <TextBox x:Name="Answer3TextBox"
+                         Watermark="Answer 3"
+                         TextInput="NumberTextBox_OnTextInput"/>
+
+                <TextBlock Text="Answer 4:" FontSize="16"/>
+                <TextBox x:Name="Answer4TextBox"
+                         Watermark="Answer 4"
+                         TextInput="NumberTextBox_OnTextInput"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Spacing="10"
+                        Margin="0,20,0,0">
+                <Button Content="Back"
+                        Width="100"
+                        Background="#FF4C4C"
+                        Foreground="Black"
+                        Click="BackButton_Click"/>
+
+                <Button Content="Apply"
+                        Width="100"
+                        Background="#4CA3FF"
+                        Foreground="Black"
+                        Click="ApplyButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

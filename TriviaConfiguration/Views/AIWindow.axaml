@@ -1,0 +1,110 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TriviaConfiguration.Views.AIWindow"
+        Width="850"
+        Height="760"
+        Title="AI Trivia Generator">
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="15">
+
+            <TextBlock Text="AI Trivia Generator"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <!-- QUESTION COUNTS -->
+            <StackPanel Orientation="Horizontal" Spacing="15">
+                <StackPanel>
+                    <TextBlock Text="Multiple Choice"/>
+                    <TextBox x:Name="MCQuestionsTextBox" Width="100"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Input Questions"/>
+                    <TextBox x:Name="InputQuestionsTextBox" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- LANGUAGE -->
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="Language:" VerticalAlignment="Center"/>
+                <ComboBox x:Name="LanguageComboBox" Width="160">
+                    <ComboBoxItem Content="English"/>
+                    <ComboBoxItem Content="Romanian"/>
+                    <ComboBoxItem Content="French"/>
+                    <ComboBoxItem Content="German"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- ADDITIONAL PROMPT -->
+            <TextBlock Text="Additional Instructions:"/>
+            <TextBox x:Name="AdditionalPromptTextBox"
+                     Height="120"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"/>
+
+            <!-- FILE SECTION -->
+            <TextBlock Text="File (optional, 1 file max):"/>
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <StackPanel Spacing="10">
+
+                    <TextBlock x:Name="SelectedFileText"
+                               Text="No file selected"/>
+
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+
+                        <Button Content="Add File"
+                                Width="100"
+                                Background="#4CA3FF"
+                                Foreground="Black"
+                                Click="AddFileButton_Click"/>
+
+                        <Button Content="Clear"
+                                Width="80"
+                                Background="#FFE14C"
+                                Foreground="Black"
+                                Click="ClearFileButton_Click"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+
+            <!-- BUTTONS -->
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="20"
+                        Margin="0,20,0,0">
+
+                <Button x:Name="BackButton"
+                        Content="Back"
+                        Width="120"
+                        Background="#FF4C4C"
+                        Foreground="Black"
+                        Click="BackButton_Click"/>
+
+                <Button x:Name="ApplyButton"
+                        Content="Generate (Replace)"
+                        Width="150"
+                        Background="#4CA3FF"
+                        Foreground="Black"
+                        Click="GenerateReplace_Click"/>
+
+                <Button x:Name="AppendButton"
+                        Content="Generate (Append)"
+                        Width="150"
+                        Background="#0fdf19"
+                        Foreground="Black"
+                        Click="GenerateAppend_Click"/>
+
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
