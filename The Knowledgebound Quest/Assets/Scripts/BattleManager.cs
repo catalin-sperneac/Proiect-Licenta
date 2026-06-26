@@ -224,7 +224,6 @@ public class BattleManager : MonoBehaviour
             {
                 enemyHealth.TakeDamage(damage);
             }
-            ResetTemporaryEffects();
             TriviaLoader.instance.currentRequester = null;
             StartCoroutine(MovePlayer(1f));
         }
@@ -255,6 +254,7 @@ public class BattleManager : MonoBehaviour
             TriviaLoader.instance.currentRequester = null;
             StartCoroutine(MoveEnemy(1f));
         }
+		ResetTemporaryEffects();
         StartCoroutine(HideBattleUI(1f));
     }
 
